@@ -1,0 +1,57 @@
+body.black {
+    background-color: black;
+}
+div.main-container {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/** Couleur du fond quand F11 **/
+:-webkit-full-screen {
+    background-color: black;
+}
+:-moz-full-screen {
+    background-color: black;
+}
+:-ms-fullscreen {
+    background-color: black;
+}
+:fullscreen {
+    background-color: black;
+}
+
+html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/**
+Centre le placeholde
+ */
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+}

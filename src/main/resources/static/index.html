@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GifMonitor</title>
+    <link href="/webjars/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <link href="/webjars/Hover/2.0.2/css/hover.css" rel="stylesheet">
+    <script src="/js/sender.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/cover.css" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+</head>
+<body>
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container z-depth-2 p-2">
+
+            <div class="inner cover">
+                <h1 class="cover-heading">Share your mood !</h1>
+                <p class="lead">
+                <form>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-6 col-lg-auto">
+                            <input type="text" id="urlGif" class="form-control" placeholder="Copy giphy link here...">
+                        </div>
+                    </div>
+                    <button id="send" class="btn btn-default hvr-buzz-out" type="submit">Enjoy !</button>
+                </form>
+                </p>
+            </div>
+            <div class="inner cover">
+                <a href="show.html">Screen mode !</a>
+            </div>
+
+            <!--<div class="mastfoot">-->
+            <!--<div class="inner">-->
+            <!--<p>url du github</p>-->
+            <!--</div>-->
+            <!--</div>-->
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

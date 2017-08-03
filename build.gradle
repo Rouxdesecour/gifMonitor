@@ -1,0 +1,65 @@
+group 'yrr.project.gifmonitor'
+version '1.0-SNAPSHOT'
+
+//dépendances pour le build de l'applications (contient les plugins etc...)
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-spring-boot'
+    version = '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    // tag::jetty[]
+//    compile("org.springframework.boot:spring-boot-starter-web") {
+//        //exclude module: "spring-boot-starter-tomcat"
+//    }
+    //compile("org.springframework.boot:spring-boot-starter-jetty")
+    // end::jetty[]
+    // tag::actuator[]
+    //compile("org.springframework.boot:spring-boot-starter-actuator")
+    // end::actuator[]
+
+    // Spring socket
+    compile("org.springframework.boot:spring-boot-starter-websocket")
+    compile("org.webjars:webjars-locator")
+    //dépendances js
+    compile("org.webjars:sockjs-client:1.0.2")
+    compile("org.webjars:stomp-websocket:2.3.3")
+    compile("org.webjars:bootstrap:4.0.0-alpha.6-1")
+    compile("org.webjars:jquery:3.1.0")
+    //fin spring socket
+
+    //effets Css
+    compile group: 'org.webjars.bower', name: 'Hover', version: '2.0.2'
+    compile group: 'org.webjars', name: 'animate.css', version: '3.5.2'
+
+
+    compile('org.projectlombok:lombok:1.16.0')
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    //Devtools pour reload automatique
+    //TODO supprimer cette dépendance pour les builds releases ?
+    compile("org.springframework.boot:spring-boot-devtools")
+    testCompile("junit:junit")
+
+}
